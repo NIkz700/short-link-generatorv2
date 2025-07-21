@@ -1,41 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
-  <title>SHORT-LINK-GENERATOR ✨</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+  <title>SHORT-LINK-GENERATOR ✨</title>
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- AdSense script -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7100572807540171"
+     crossorigin="anonymous"></script>
 </head>
 <body>
-  <div class="ticker">
-    <span>🔗 Welcome to SHORT-LINK-GENERATOR — Free URL Shortener built by Niko Sedan × ChatGPT</span>
-  </div>
+  <div class="ticker">
+    <span>🔗 Welcome to SHORT-LINK-GENERATOR — Free URL Shortener built by Niko Sedan × ChatGPT</span>
+  </div>
 
-  <main>
-    <h1>🔗 SHORT-LINK-GENERATOR</h1>
-    <p class="subtitle">Shorten your long URLs for free — fast, easy, and secure!</p>
+  <main>
+    <h1>🔗 SHORT-LINK-GENERATOR</h1>
+    <p class="subtitle">Shorten your long URLs for free — fast, easy, and secure!</p>
 
-    <div class="form-group">
-      <input type="text" id="longUrl" placeholder="Enter your URL here (include http://)"/>
-      <button onclick="shortenUrl()">Shorten URL</button>
-    </div>
+    <div class="form-group">
+      <input type="text" id="longUrl" placeholder="Enter your URL here (include http://)"/>
+      <button onclick="shortenUrl()">Shorten URL</button>
+    </div>
 
-    <div id="output" class="output"></div>
+    <div id="output" class="output"></div>
 
-    <section class="about">
-      <h2>🌐 About This Web App</h2>
-      <p>
-        SHORT-LINK-GENERATOR is a lightweight, static URL shortener using the CleanURI API.  
-        No signup, no ads—just real, quick links.  
-        Designed by <strong>Niko Sedan</strong> × ChatGPT.
-      </p>
-    </section>
-  </main>
+    <!-- Ad here (after output) -->
+    <div class="ad-container">
+      <ins class="adsbygoogle"
+           style="display:block; text-align:center;"
+           data-ad-client="ca-pub-7100572807540171"
+           data-ad-slot="1234567890" <!-- Replace with real slot -->
+           data-ad-format="auto"
+           data-full-width-responsive="true"></ins>
+      <script>
+         (adsbygoogle = window.adsbygoogle || []).push({});
+      </script>
+    </div>
 
-  <footer>
-    &copy; 2025 Niko Sedan. Powered by ChatGPT. All rights reserved.
-  </footer>
+    <section class="about">
+      <h2>🌐 About This Web App</h2>
+      <p>
+        SHORT-LINK-GENERATOR is a lightweight, static URL shortener using the CleanURI API.  
+        No signup, no ads—just real, quick links.  
+        Designed by <strong>Niko Sedan</strong> × ChatGPT.
+      </p>
+    </section>
+  </main>
 
-  <script src="script.js"></script>
+  <footer>
+    &copy; 2025 Niko Sedan. Powered by ChatGPT. All rights reserved.
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
