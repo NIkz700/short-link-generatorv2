@@ -2,26 +2,33 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Niko ShortLink ✨</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+  <title>SHORT-LINK-GENERATOR ✨</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <div class="ticker">🔗 Welcome to Niko ShortLink — Free URL Shortener built by Niko Sedan × ChatGPT</div>
+  <div class="ticker">
+    <span>🔗 Welcome to SHORT-LINK-GENERATOR — Free URL Shortener built by Niko Sedan × ChatGPT</span>
+  </div>
 
   <main>
-    <h1>🔗 Niko ShortLink</h1>
+    <h1>🔗 SHORT-LINK-GENERATOR</h1>
     <p class="subtitle">Shorten your long URLs for free — fast, easy, and secure!</p>
 
-    <input type="text" id="longUrl" placeholder="Enter long URL here..." />
-    <button onclick="shortenUrl()">Shorten URL</button>
-    <div id="output"></div>
+    <div class="form-group">
+      <input type="text" id="longUrl" placeholder="Enter your URL here (include http://)"/>
+      <button onclick="shortenUrl()">Shorten URL</button>
+    </div>
+
+    <div id="output" class="output"></div>
 
     <section class="about">
       <h2>🌐 About This Web App</h2>
-      <p>This is a free and mobile-friendly URL shortener powered by <strong>TinyURL</strong> API. Works smoothly on all browsers and devices — no hosting needed.</p>
-      <p>📱 Designed by <strong>Niko Sedan</strong> (Philippines) × ChatGPT (OpenAI).</p>
-      <p>⚡ Fast. No signup. No ads. Just real links.</p>
+      <p>
+        ShortNova is a lightweight, static URL shortener using the CleanURI API.  
+        No signup, no ads—just real, quick links.  
+        Designed by <strong>Niko Sedan</strong> × ChatGPT.
+      </p>
     </section>
   </main>
 
