@@ -1,93 +1,114 @@
-body {
+/* Reset & base */
+* {
   margin: 0;
-  font-family: "Segoe UI", sans-serif;
-  background: #f6f9ff;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: #ffffff;
   color: #222;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  min-height: 100vh;
 }
 
+/* Running ticker */
+.ticker {
+  background: #0057ff;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.ticker span {
+  display: inline-block;
+  padding: 0.5rem 0;
+  color: #fff;
+  animation: scrollText 15s linear infinite;
+}
+@keyframes scrollText {
+  0%   { transform: translateX(100%); }
+  100% { transform: translateX(-100%); }
+}
+
+/* Main content */
 main {
-  padding: 20px;
-  max-width: 600px;
+  flex: 1;
   width: 100%;
+  max-width: 480px;
+  margin: auto;
+  padding: 1.5rem 1rem;
   text-align: center;
 }
-
 h1 {
-  font-size: 2em;
+  font-size: 1.6rem;
+  margin-bottom: 0.5rem;
   color: #0057ff;
-  margin-bottom: 10px;
 }
-
 .subtitle {
-  font-size: 1em;
+  font-size: 0.95rem;
+  margin-bottom: 1.5rem;
   color: #555;
-  margin-bottom: 30px;
 }
 
+/* Form */
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
 input[type="text"] {
-  width: 90%;
-  padding: 12px;
-  font-size: 1em;
-  border: 2px solid #ccc;
-  border-radius: 10px;
-  margin-bottom: 10px;
+  width: 100%;
+  padding: 0.75rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
 }
-
 button {
-  padding: 12px 20px;
-  font-size: 1em;
+  padding: 0.75rem;
+  font-size: 1rem;
   background: #0057ff;
   color: #fff;
   border: none;
-  border-radius: 12px;
+  border-radius: 8px;
   cursor: pointer;
-  transition: background 0.3s ease;
+  transition: background 0.2s;
 }
-
 button:hover {
-  background: #003fbb;
+  background: #0041bb;
 }
 
-#output {
-  margin-top: 20px;
-  font-size: 1.1em;
+/* Output */
+.output {
+  margin-top: 1rem;
+  font-size: 1rem;
   word-break: break-word;
+  color: #007acc;
 }
 
+/* About section */
 .about {
-  margin-top: 40px;
-  background: #eef2ff;
+  margin-top: 2rem;
+  background: #f0f4ff;
+  padding: 1rem;
   border-radius: 10px;
-  padding: 15px;
-  box-shadow: 0 0 10px rgba(0,0,255,0.1);
   text-align: left;
+  font-size: 0.9rem;
+  color: #333;
 }
-
 .about h2 {
-  color: #003fbb;
+  margin-bottom: 0.5rem;
+  color: #0057ff;
 }
 
+/* Footer */
 footer {
-  margin-top: 50px;
-  padding: 10px;
-  font-size: 0.9em;
-  color: #666;
-}
-
-.ticker {
-  background: #0057ff;
-  color: #fff;
-  width: 100%;
-  padding: 8px;
   text-align: center;
-  font-weight: bold;
-  animation: scrollText 10s linear infinite;
+  padding: 1rem;
+  font-size: 0.85rem;
+  color: #777;
 }
 
-@keyframes scrollText {
-  0% { transform: translateX(100%); }
-  100% { transform: translateX(-100%); }
+/* Prevent auto-zoom on input focus for iOS */
+input, button {
+  touch-action: manipulation;
 }
